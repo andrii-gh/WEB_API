@@ -1,0 +1,33 @@
+﻿@model List<_01.Models.Product>
+
+@{
+    ViewData["Title"] = "Каталог";
+}
+
+<div class="container mt-4">
+    <h1>Каталог товарів</h1>
+    <p class="text-muted">Усього товарів: <strong>@Model.Count</strong></p>
+
+    <div class="row mt-4">
+        @foreach (var product in Model)
+        {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-secondary align-self-start mb-2">
+                            @product.Category?.Name
+                            </span>
+
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text text-muted flex-grow-1">@product.Description</p>
+
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="h5 mb-0 text-primary">@product.Price ₴</span>
+                                <span class="badge bg-success">@product.Amount шт.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        }
+    </div>
+</div>  
