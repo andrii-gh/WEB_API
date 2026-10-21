@@ -1,0 +1,629 @@
+2026-10-21 17:52:11.755 +03:00 [INF] Запуск FoodDeliveryApi...
+2026-10-21 17:52:12.098 +03:00 [FTL] Сервер впав
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Admin\source\repos\Finall_ASP.NET\Finall_ASP.NET\Program.cs:line 36
+2026-10-21 17:52:35.954 +03:00 [INF] Запуск FoodDeliveryApi...
+2026-10-21 17:52:36.098 +03:00 [FTL] Сервер впав
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Admin\source\repos\Finall_ASP.NET\Finall_ASP.NET\Program.cs:line 36
+2026-10-21 17:54:48.787 +03:00 [INF] Запуск FoodDeliveryApi...
+2026-10-21 17:54:49.682 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-10-21 17:54:49.764 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2026-10-21 17:54:49.777 +03:00 [INF] Quartz Scheduler created
+2026-10-21 17:54:49.778 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2026-10-21 17:54:49.778 +03:00 [INF] RAMJobStore initialized.
+2026-10-21 17:54:49.779 +03:00 [INF] Quartz Scheduler 3.13.1.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2026-10-21 17:54:49.780 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2026-10-21 17:54:49.781 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2026-10-21 17:54:49.789 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2026-10-21 17:54:49.790 +03:00 [INF] Adding job: DEFAULT.OrderStatusJob
+2026-10-21 17:54:50.149 +03:00 [INF] Now listening on: https://localhost:7154
+2026-10-21 17:54:50.151 +03:00 [INF] Now listening on: http://localhost:5003
+2026-10-21 17:54:50.212 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-21 17:54:50.214 +03:00 [INF] Hosting environment: Development
+2026-10-21 17:54:50.214 +03:00 [INF] Content root path: C:\Users\Admin\source\repos\Finall_ASP.NET\Finall_ASP.NET
+2026-10-21 17:54:50.215 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2026-10-21 17:55:01.399 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-10-21 17:55:01.400 +03:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-10-21 17:55:04.602 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 17:55:30.140 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 17:56:00.054 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 17:56:30.136 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 17:57:00.108 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 17:57:30.097 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 17:58:00.132 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 17:58:30.016 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 17:59:00.078 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 17:59:30.042 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:00:00.076 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:00:18.480 +03:00 [INF] Запуск FoodDeliveryApi...
+2026-10-21 18:00:18.947 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-10-21 18:00:19.065 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2026-10-21 18:00:19.067 +03:00 [INF] Quartz Scheduler created
+2026-10-21 18:00:19.068 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2026-10-21 18:00:19.069 +03:00 [INF] RAMJobStore initialized.
+2026-10-21 18:00:19.069 +03:00 [INF] Quartz Scheduler 3.13.1.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2026-10-21 18:00:19.070 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2026-10-21 18:00:19.070 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2026-10-21 18:00:19.080 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2026-10-21 18:00:19.081 +03:00 [INF] Adding job: DEFAULT.OrderStatusJob
+2026-10-21 18:00:19.327 +03:00 [INF] Now listening on: https://localhost:7154
+2026-10-21 18:00:19.330 +03:00 [INF] Now listening on: http://localhost:5003
+2026-10-21 18:00:19.390 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-21 18:00:19.391 +03:00 [INF] Hosting environment: Development
+2026-10-21 18:00:19.392 +03:00 [INF] Content root path: C:\Users\Admin\source\repos\Finall_ASP.NET\Finall_ASP.NET
+2026-10-21 18:00:19.392 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2026-10-21 18:00:30.411 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-10-21 18:00:30.412 +03:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-10-21 18:00:31.009 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:01:00.121 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:01:30.125 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:05:43.806 +03:00 [INF] Запуск FoodDeliveryApi...
+2026-10-21 18:05:44.316 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-10-21 18:05:44.383 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2026-10-21 18:05:44.384 +03:00 [INF] Quartz Scheduler created
+2026-10-21 18:05:44.384 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2026-10-21 18:05:44.385 +03:00 [INF] RAMJobStore initialized.
+2026-10-21 18:05:44.386 +03:00 [INF] Quartz Scheduler 3.13.1.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2026-10-21 18:05:44.386 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2026-10-21 18:05:44.387 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2026-10-21 18:05:44.397 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2026-10-21 18:05:44.398 +03:00 [INF] Adding job: DEFAULT.OrderStatusJob
+2026-10-21 18:05:44.609 +03:00 [INF] Now listening on: https://localhost:7154
+2026-10-21 18:05:44.611 +03:00 [INF] Now listening on: http://localhost:5003
+2026-10-21 18:05:44.696 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-21 18:05:44.696 +03:00 [INF] Hosting environment: Development
+2026-10-21 18:05:44.697 +03:00 [INF] Content root path: C:\Users\Admin\source\repos\Finall_ASP.NET\Finall_ASP.NET
+2026-10-21 18:05:44.698 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2026-10-21 18:06:00.453 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-10-21 18:06:00.455 +03:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-10-21 18:06:01.245 +03:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:06:30.157 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:07:00.079 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:07:30.101 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:08:00.108 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:08:30.072 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:09:00.048 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:09:30.015 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:10:00.018 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:10:30.078 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:11:00.297 +03:00 [INF] Executed DbCommand (150ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:11:30.017 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:12:00.103 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:12:30.014 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:13:00.025 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:13:30.081 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:14:00.014 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:14:30.006 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:15:00.078 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:15:30.072 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:16:00.035 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:16:30.014 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:17:00.013 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:17:30.012 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:18:00.054 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:18:30.013 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:19:00.015 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:19:30.105 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:20:00.040 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:20:30.064 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:21:00.048 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:21:30.091 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:22:00.015 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:22:30.109 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:23:00.014 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:23:30.012 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:24:00.053 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:24:30.018 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:25:00.023 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:25:30.052 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:26:00.024 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:26:30.013 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:27:00.098 +03:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:27:30.012 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:28:00.047 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:28:30.011 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:29:00.019 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:29:30.104 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:30:00.018 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:30:30.012 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:31:00.031 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:31:30.007 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:32:00.080 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:32:30.020 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:33:00.014 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:33:30.018 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:34:00.078 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:34:30.048 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:35:00.047 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:35:30.047 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:36:00.100 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:36:30.012 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:37:00.015 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:37:30.017 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:38:00.017 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:38:30.086 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:39:00.021 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:39:30.017 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:40:00.026 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:40:30.020 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:41:00.010 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:41:30.017 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:42:00.012 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:42:30.012 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:43:00.027 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:43:30.021 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:44:00.011 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:44:30.044 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:45:00.010 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:45:30.014 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:46:00.096 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:46:30.012 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:47:00.013 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:47:30.006 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:48:00.047 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:48:30.070 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:49:00.046 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:49:30.015 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:50:00.070 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:50:30.020 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:51:00.070 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:51:30.012 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:52:00.028 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:52:30.022 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:53:00.014 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:53:30.014 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:54:00.107 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:54:30.017 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:55:00.009 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:55:30.017 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:56:00.070 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:56:30.013 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:57:00.014 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:57:30.046 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:58:00.010 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:58:30.043 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:59:00.016 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 18:59:22.014 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/ - null null
+2026-10-21 18:59:22.734 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/ - 404 0 null 730.0984ms
+2026-10-21 18:59:22.738 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7154/, Response status code: 404
+2026-10-21 18:59:30.033 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 19:00:00.012 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 19:00:30.014 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 19:00:55.526 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger - null null
+2026-10-21 19:00:55.538 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger - 301 0 null 11.8252ms
+2026-10-21 19:00:55.541 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/index.html - null null
+2026-10-21 19:00:56.048 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/index.html - 200 null text/html;charset=utf-8 507.2431ms
+2026-10-21 19:00:56.054 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/swagger-ui.css - null null
+2026-10-21 19:00:56.055 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/swagger-ui-bundle.js - null null
+2026-10-21 19:00:56.054 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-21 19:00:56.054 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/index.css - null null
+2026-10-21 19:00:56.124 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/index.js - null null
+2026-10-21 19:00:56.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-21 19:00:56.164 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/index.js - 200 null application/javascript;charset=utf-8 105.5111ms
+2026-10-21 19:00:56.157 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/_vs/browserLink - null null
+2026-10-21 19:00:56.174 +03:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-10-21 19:00:56.175 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/index.css - 200 202 text/css 120.7879ms
+2026-10-21 19:00:56.175 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 51.0957ms
+2026-10-21 19:00:56.187 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-10-21 19:00:56.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/swagger-ui.css - 200 152035 text/css 134.8533ms
+2026-10-21 19:00:56.192 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-10-21 19:00:56.192 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 137.9476ms
+2026-10-21 19:00:56.236 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 78.8083ms
+2026-10-21 19:00:56.243 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-10-21 19:00:56.243 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/swagger-ui-bundle.js - 200 1426001 text/javascript 188.7139ms
+2026-10-21 19:00:56.358 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/v1/swagger.json - null null
+2026-10-21 19:00:56.369 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.4342ms
+2026-10-21 19:00:56.379 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/favicon-32x32.png - null null
+2026-10-21 19:00:56.381 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-10-21 19:00:56.382 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/favicon-32x32.png - 200 628 image/png 3.068ms
+2026-10-21 19:01:00.020 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 19:01:06.407 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/index.html - null null
+2026-10-21 19:01:06.410 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/index.html - 200 null text/html;charset=utf-8 3.8667ms
+2026-10-21 19:01:06.417 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-21 19:01:06.417 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/_vs/browserLink - null null
+2026-10-21 19:01:06.417 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/index.js - null null
+2026-10-21 19:01:06.420 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 2.7992ms
+2026-10-21 19:01:06.423 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/index.js - 200 null application/javascript;charset=utf-8 5.3406ms
+2026-10-21 19:01:06.424 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.2244ms
+2026-10-21 19:01:06.472 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger/v1/swagger.json - null null
+2026-10-21 19:01:06.476 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.6237ms
+2026-10-21 19:01:30.012 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 19:02:00.013 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
+2026-10-21 19:02:30.021 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedAt], [o].[CustomerName], [o].[Phone], [o].[Status], [o].[TotalPrice]
+FROM [Orders] AS [o]
+WHERE [o].[Status] = N'Нове' AND [o].[CreatedAt] < DATEADD(minute, CAST(-1.0E0 AS int), GETUTCDATE())
