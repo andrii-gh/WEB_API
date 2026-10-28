@@ -11,8 +11,15 @@ namespace _01
 
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
@@ -23,6 +30,9 @@ namespace _01
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSession();
+
             app.UseRouting();
 
             app.UseAuthorization();

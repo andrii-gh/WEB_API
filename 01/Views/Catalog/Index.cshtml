@@ -38,6 +38,11 @@
                                     Видалити
                                 </a>
                             </div>
+
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-id="@product.Id"
+                               class="btn btn-sm btn-success w-100 mt-2">
+                                Додати в кошик
+                            </a>
                         </div>
                     </div>
                 </div>

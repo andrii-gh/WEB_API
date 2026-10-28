@@ -1,0 +1,63 @@
+﻿@model List<_01.Models.CartItem>
+
+@{
+    ViewData["Title"] = "Кошик";
+}
+
+<div class="container mt-4">
+    <h1>Мій кошик</h1>
+
+    @if (!Model.Any())
+    {
+            <div class="alert alert-info mt-4">
+                Ваш кошик порожній. <a asp-controller="Catalog" asp-action="Index">Перейти до каталогу</a>.
+            </div>
+    }
+    else
+    {
+            <table class="table table-striped mt-4">
+                <thead>
+                    <tr>
+                        <th>Товар</th>
+                        <th>Ціна</th>
+                        <th>Кількість</th>
+                        <th>Сума</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@item.Price ₴</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <!-- Кнопка мінус -->
+                                        <a asp-action="Decrease" asp-route-id="@item.ProductId" class="btn btn-sm btn-outline-danger">−</a>
+
+                                        <span class="mx-3 fw-bold">@item.Quantity</span>
+
+                                        <!-- Кнопка плюс (блокується, якщо досягнуто максимум) -->
+                                @if (item.Quantity < item.MaxAmount)
+                                {
+                                                <a asp-action="Increase" asp-route-id="@item.ProductId" class="btn btn-sm btn-outline-success">+</a>
+                                }
+                                else
+                                {
+                                                <button class="btn btn-sm btn-outline-secondary" disabled>+</button>
+                                }
+                                    </div>
+                                </td>
+                                <td>@(item.Price * item.Quantity) ₴</td>
+                            </tr>
+                }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-end fw-bold">Разом:</td>
+                        <td class="fw-bold text-primary">@Model.Sum(x => x.Price * x.Quantity) ₴</td>
+                    </tr>
+                </tfoot>
+            </table>
+    }
+</div>
