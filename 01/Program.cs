@@ -1,4 +1,5 @@
 using _01.Data;
+using _01.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace _01
@@ -20,6 +21,8 @@ namespace _01
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
             var app = builder.Build();
 

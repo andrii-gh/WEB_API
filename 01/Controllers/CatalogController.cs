@@ -1,24 +1,45 @@
 ﻿using _01.Data;
 using _01.Models;
+using _01.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace _01.Controllers
 {
     public class CatalogController : Controller
     {
+        private readonly IProductRepository _productRepository;
         private readonly ApplicationDbContext _context;
 
-        public CatalogController(ApplicationDbContext context)
+        public CatalogController(IProductRepository productRepository, ApplicationDbContext context)
         {
+            _productRepository = productRepository;
             _context = context;
         }
 
         public async Task<IActionResult> Index()
         {
-            var products = await _context.Products.Include(p => p.Category).ToListAsync();
+            var products = await _productRepository.GetAllAsync();
             return View(products);
+        }
+
+        public async Task<IActionResult> ByName(string name)
+        {
+            var products = await _productRepository.GetByNameAsync(name);
+            if (products == null) return NotFound();
+            return View("Index", new List<Product> { products });
+        }
+
+        public async Task<IActionResult> ByCategory(string categoryName)
+        {
+            var products = await _productRepository.GetByCategoryNameAsync(categoryName);
+            return View("Index", products);
+        }
+
+        public async Task<IActionResult> ByPrice(decimal min, decimal max)
+        {
+            var products = await _productRepository.GetByPriceRangeAsync(min, max);
+            return View("Index", products);
         }
 
         public IActionResult Create()
@@ -33,8 +54,7 @@ namespace _01.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Products.Add(product);
-                await _context.SaveChangesAsync();
+                await _productRepository.AddAsync(product);
                 return RedirectToAction(nameof(Index));
             }
             ViewBag.Categories = new SelectList(_context.Categories, "Id", "Name", product.CategoryId);
@@ -45,7 +65,7 @@ namespace _01.Controllers
         {
             if (id == null) return NotFound();
 
-            var product = await _context.Products.FindAsync(id);
+            var product = await _productRepository.GetByIdAsync(id.Value);
             if (product == null) return NotFound();
 
             ViewBag.Categories = new SelectList(_context.Categories, "Id", "Name", product.CategoryId);
@@ -60,16 +80,7 @@ namespace _01.Controllers
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(product);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!_context.Products.Any(e => e.Id == product.Id)) return NotFound();
-                    else throw;
-                }
+                await _productRepository.UpdateAsync(product);
                 return RedirectToAction(nameof(Index));
             }
             ViewBag.Categories = new SelectList(_context.Categories, "Id", "Name", product.CategoryId);
@@ -80,9 +91,7 @@ namespace _01.Controllers
         {
             if (id == null) return NotFound();
 
-            var product = await _context.Products
-                .Include(p => p.Category)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var product = await _productRepository.GetByIdAsync(id.Value);
             if (product == null) return NotFound();
 
             return View(product);
@@ -92,12 +101,7 @@ namespace _01.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var product = await _context.Products.FindAsync(id);
-            if (product != null)
-            {
-                _context.Products.Remove(product);
-                await _context.SaveChangesAsync();
-            }
+            await _productRepository.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
     }
