@@ -14,7 +14,7 @@
         <h5>Оберіть категорію:</h5>
         <div class="d-flex flex-wrap gap-2">
 
-            <a asp-action="Index" 
+            <a asp-action="Index"
                class="btn @(ViewBag.CurrentCategory == null ? "btn-primary" : "btn-outline-primary")">
                 Всі товари
             </a>
@@ -22,8 +22,8 @@
             @foreach (var category in ViewBag.Categories as List<_01.Models.Category>)
             {
                 var isActive = ViewBag.CurrentCategory == category.Name;
-                    <a asp-action="Index" 
-                       asp-route-categoryName="@category.Name" 
+                    <a asp-action="Index"
+                       asp-route-categoryName="@category.Name"
                        class="btn @(isActive ? "btn-primary" : "btn-outline-primary")">
                     @category.Name
                     </a>
@@ -46,6 +46,17 @@
             {
                         <div class="col-md-4 mb-4">
                             <div class="card h-100 shadow-sm">
+                        @if (!string.IsNullOrEmpty(product.Image))
+                        {
+                                        <img src="@product.Image" class="card-img-top" alt="@product.Name" style="height: 220px; object-fit: cover;" />
+                        }
+                        else
+                        {
+                                        <div class="d-flex align-items-center justify-content-center bg-light" style="height: 220px;">
+                                            <span class="text-muted">Фото відсутнє</span>
+                                        </div>
+                        }
+
                                 <div class="card-body d-flex flex-column">
                                     <span class="badge bg-secondary align-self-start mb-2">
                                 @product.Category?.Name

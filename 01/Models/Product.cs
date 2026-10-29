@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace _01.Models
 {
@@ -25,8 +26,12 @@ namespace _01.Models
         [Display(Name = "Кількість на складі")]
         public int Amount { get; set; }
 
-        [Display(Name = "Фото (URL)")]
-        public string Image { get; set; } = string.Empty;
+        [Display(Name = "Фото")]
+        public string? Image { get; set; }
+
+        [NotMapped]
+        [Display(Name = "Обрати фото")]
+        public IFormFile? ImageFile { get; set; }
 
         [Required(ErrorMessage = "Оберіть категорію")]
         [Display(Name = "Категорія")]
